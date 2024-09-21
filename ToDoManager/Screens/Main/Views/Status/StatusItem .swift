@@ -42,6 +42,18 @@ final class StatusItem: BaseView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func setupView() {
+        self.onTab { [self] in
+            if title.textColor == R.Colors.inactive, contener.backgroundColor == R.Colors.inactive {
+               title.textColor = R.Colors.active
+                contener.backgroundColor = R.Colors.active
+            } else {
+                title.textColor = R.Colors.inactive
+                contener.backgroundColor = R.Colors.inactive
+            }
+        }
+    }
+    
     override func setupSubViews() {
         addSubview(title)
         title.snp.makeConstraints { make in

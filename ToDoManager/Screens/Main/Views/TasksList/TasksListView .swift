@@ -23,8 +23,12 @@ final class TasksListView: BaseView {
         return view
     }()
     
+    lazy var alert = EditAlert()
+    
     private let api = ApiClient()
     lazy var combineData = [DataSoureModel]()
+    lazy var completedTasks = [DataSoureModel]()
+    lazy var notCompleteTasks = [DataSoureModel]()
     
     override func setupView() {
         fetchAndCombineData()
@@ -53,8 +57,23 @@ final class TasksListView: BaseView {
         
         dispatchGroup.notify(queue: .main) {
             self.combineData = apiDataSourceArray + coreDataSourceArrat
+            self.completedOrNot()
             self.tableView.reloadData()
         }
+    }
+    
+    private func completedOrNot() {
+        for task in combineData {
+            if task.completed {
+                completedTasks.append(task)
+                
+            } else {
+                notCompleteTasks.append(task)
+            }
+        }
+        
+     print(completedTasks)
+        print(notCompleteTasks)
     }
     
     override func setupSubViews() {
@@ -82,10 +101,28 @@ extension TasksListView: UITableViewDelegate, UITableViewDataSource {
         
         cell.title.text = task.title
         cell.descriptionLabel.text = task.title
-        cell.tapCheckox(isTapped: task.completed)
         
+        if task.completed {
+            cell.checkBox.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+            cell.checkBox.layer.borderWidth = 0
+            cell.line.isHidden = false
+        }
+
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let convertToString = String(combineData[indexPath.row].title)
+            CoreDataManager.shared.deleteTask(with: convertToString)
+            combineData.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        alert.show()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

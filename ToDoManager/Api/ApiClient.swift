@@ -38,29 +38,3 @@ final class ApiClient {
         task.resume()
     }
 }
-
-struct TasksData: Decodable {
-    let todos: [ToDos]
-}
-
-struct ToDos: Decodable {
-    let id: Int
-    let todo: String
-    let completed: Bool
-    let userId: Int
-}
-
-struct DataSoureModel {
-    var title: String
-    var completed: Bool
-    
-    init(todo: ToDos) {
-        title = todo.todo
-        completed = todo.completed
-    }
-    
-    init(coreDataTasks: Tasks) {
-        self.title = coreDataTasks.title ?? "No Task"
-        self.completed = false
-    }
-}

@@ -31,7 +31,7 @@ final class TasksListCell: BaseTableViewCell {
         return view
     }()
     
-    private lazy var checkBox: UIButton = {
+     lazy var checkBox: UIButton = {
         let view = UIButton(type: .system)
         view.layer.cornerRadius = 15
         view.layer.borderWidth = 2
@@ -46,7 +46,7 @@ final class TasksListCell: BaseTableViewCell {
         return view
     }()
     
-    private lazy var line: BaseView = {
+     lazy var line: BaseView = {
        let view = BaseView()
         view.backgroundColor = R.Colors.secondary
         view.isHidden = true
@@ -131,8 +131,8 @@ final class TasksListCell: BaseTableViewCell {
 
 @objc extension TasksListCell {
     
-    func tapCheckox(isTapped: Bool) {
-        if isTapped {
+    func tapCheckox() {
+        if checkBox.currentImage == nil {
             checkBox.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
             checkBox.layer.borderWidth = 0
             line.isHidden = false

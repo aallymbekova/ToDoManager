@@ -32,6 +32,11 @@
 		BCB9D8892C98A6F800B75EB8 /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8872C98A6F800B75EB8 /* Tasks+CoreDataProperties.swift */; };
 		BCB9D88B2C99CF2C00B75EB8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D88A2C99CF2C00B75EB8 /* CoreDataManager.swift */; };
 		BCB9D8902C9C8F4000B75EB8 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D88F2C9C8F4000B75EB8 /* AddButton.swift */; };
+		BCB9D8932C9DF22600B75EB8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8922C9DF22600B75EB8 /* CustomAlert.swift */; };
+		BCB9D8952C9DF3EA00B75EB8 /* EditAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8942C9DF3EA00B75EB8 /* EditAlert.swift */; };
+		BCB9D8982C9F363F00B75EB8 /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8972C9F363F00B75EB8 /* TaskData.swift */; };
+		BCB9D89A2C9F365D00B75EB8 /* ToDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8992C9F365D00B75EB8 /* ToDos.swift */; };
+		BCB9D89C2C9F367600B75EB8 /* DataSoureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D89B2C9F367600B75EB8 /* DataSoureModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		BCB9D8872C98A6F800B75EB8 /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BCB9D88A2C99CF2C00B75EB8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BCB9D88F2C9C8F4000B75EB8 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		BCB9D8922C9DF22600B75EB8 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		BCB9D8942C9DF3EA00B75EB8 /* EditAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlert.swift; sourceTree = "<group>"; };
+		BCB9D8972C9F363F00B75EB8 /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+		BCB9D8992C9F365D00B75EB8 /* ToDos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDos.swift; sourceTree = "<group>"; };
+		BCB9D89B2C9F367600B75EB8 /* DataSoureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSoureModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,14 +128,14 @@
 		BCB9D8442C8F531500B75EB8 /* ToDoManager */ = {
 			isa = PBXGroup;
 			children = (
+				BCB9D89D2C9F369100B75EB8 /* DataManager */,
 				BCB9D87C2C90C65D00B75EB8 /* Api */,
+				BCB9D8962C9F361E00B75EB8 /* Model */,
 				BCB9D86C2C8F5D3900B75EB8 /* Helpers */,
 				BCB9D8592C8F551700B75EB8 /* Base */,
 				BCB9D8662C8F580500B75EB8 /* Screens */,
 				BCB9D8452C8F531500B75EB8 /* AppDelegate.swift */,
 				BCB9D8472C8F531500B75EB8 /* SceneDelegate.swift */,
-				BCB9D88A2C99CF2C00B75EB8 /* CoreDataManager.swift */,
-				BCB9D87F2C98A23D00B75EB8 /* Tasks.xcdatamodeld */,
 				BCB9D84E2C8F531600B75EB8 /* Assets.xcassets */,
 				BCB9D8502C8F531600B75EB8 /* LaunchScreen.storyboard */,
 				BCB9D8532C8F531600B75EB8 /* Info.plist */,
@@ -203,6 +213,7 @@
 		BCB9D8772C9094EF00B75EB8 /* TasksList */ = {
 			isa = PBXGroup;
 			children = (
+				BCB9D8912C9DF1FE00B75EB8 /* View */,
 				BCB9D8782C90951700B75EB8 /* TasksListView .swift */,
 				BCB9D87A2C9095A500B75EB8 /* TasksListCell.swift */,
 			);
@@ -215,6 +226,34 @@
 				BCB9D87D2C90C67200B75EB8 /* ApiClient.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		BCB9D8912C9DF1FE00B75EB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCB9D8922C9DF22600B75EB8 /* CustomAlert.swift */,
+				BCB9D8942C9DF3EA00B75EB8 /* EditAlert.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCB9D8962C9F361E00B75EB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCB9D8972C9F363F00B75EB8 /* TaskData.swift */,
+				BCB9D8992C9F365D00B75EB8 /* ToDos.swift */,
+				BCB9D89B2C9F367600B75EB8 /* DataSoureModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCB9D89D2C9F369100B75EB8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				BCB9D88A2C99CF2C00B75EB8 /* CoreDataManager.swift */,
+				BCB9D87F2C98A23D00B75EB8 /* Tasks.xcdatamodeld */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,18 +373,23 @@
 				BCB9D87B2C9095A500B75EB8 /* TasksListCell.swift in Sources */,
 				BCB9D8712C8F5E7F00B75EB8 /* UIColor + Ext .swift in Sources */,
 				BCB9D8742C8F6B6000B75EB8 /* StatusView.swift in Sources */,
+				BCB9D8932C9DF22600B75EB8 /* CustomAlert.swift in Sources */,
 				BCB9D88B2C99CF2C00B75EB8 /* CoreDataManager.swift in Sources */,
+				BCB9D89C2C9F367600B75EB8 /* DataSoureModel.swift in Sources */,
 				BCB9D8632C8F577E00B75EB8 /* BaseTableViewCell.swift in Sources */,
 				BCB9D87E2C90C67200B75EB8 /* ApiClient.swift in Sources */,
 				BCB9D84A2C8F531500B75EB8 /* ViewController.swift in Sources */,
 				BCB9D86A2C8F597300B75EB8 /* MainToolbar.swift in Sources */,
+				BCB9D8982C9F363F00B75EB8 /* TaskData.swift in Sources */,
 				BCB9D8792C90951700B75EB8 /* TasksListView .swift in Sources */,
+				BCB9D89A2C9F365D00B75EB8 /* ToDos.swift in Sources */,
 				BCB9D8652C8F57B700B75EB8 /* BaseCollectionViewCell.swift in Sources */,
 				BCB9D8882C98A6F800B75EB8 /* Tasks+CoreDataClass.swift in Sources */,
 				BCB9D8892C98A6F800B75EB8 /* Tasks+CoreDataProperties.swift in Sources */,
 				BCB9D85B2C8F552800B75EB8 /* BaseViewController.swift in Sources */,
 				BCB9D8762C8F6EEA00B75EB8 /* StatusItem .swift in Sources */,
 				BCB9D85D2C8F55A200B75EB8 /* BaseView.swift in Sources */,
+				BCB9D8952C9DF3EA00B75EB8 /* EditAlert.swift in Sources */,
 				BCB9D8812C98A23D00B75EB8 /* Tasks.xcdatamodeld in Sources */,
 				BCB9D8462C8F531500B75EB8 /* AppDelegate.swift in Sources */,
 				BCB9D8612C8F575500B75EB8 /* BaseImage.swift in Sources */,
