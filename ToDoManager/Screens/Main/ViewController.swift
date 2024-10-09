@@ -12,8 +12,6 @@ final class ViewController: BaseViewController {
     
     private lazy var toolbar = MainToolbar()
     
-    private lazy var statusView = StatusView()
-    
     private lazy var list = TasksListView()
 
     override func setupController() {
@@ -30,17 +28,9 @@ final class ViewController: BaseViewController {
             make.height.equalTo(90)
         }
         
-        view.addSubview(statusView)
-        statusView.snp.makeConstraints { make in
-            make.top.equalTo(toolbar.snp.bottom)
-            make.leading.equalTo(toolbar.snp.leading)
-            make.width.equalTo(300)
-            make.height.equalTo(20)
-        }
-        
         view.addSubview(list)
         list.snp.makeConstraints { make in
-            make.top.equalTo(statusView.snp.bottom).offset(30)
+            make.top.equalTo(toolbar.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
@@ -67,18 +57,5 @@ final class ViewController: BaseViewController {
             
             self.present(alert, animated: true)
         }
-        
-        statusView.all.onTab {
-            print("all")
-        }
-        
-        statusView.open.onTab {
-            print("open")
-        }
-
-        statusView.closed.onTab {
-            print("closed")
-        }
-
     }
 }

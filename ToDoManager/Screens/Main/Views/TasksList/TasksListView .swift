@@ -10,6 +10,8 @@ import SnapKit
 
 final class TasksListView: BaseView {
     
+    private let statusView = StatusCollectonView()
+    
      lazy var tableView: UITableView = {
        let view = UITableView()
         view.backgroundColor = .clear
@@ -23,18 +25,18 @@ final class TasksListView: BaseView {
         return view
     }()
     
-    lazy var alert = EditAlert()
+    private lazy var alert = EditAlert()
     
     private let api = ApiClient()
     lazy var combineData = [DataSoureModel]()
-    lazy var completedTasks = [DataSoureModel]()
-    lazy var notCompleteTasks = [DataSoureModel]()
+    private lazy var completedTasks = [DataSoureModel]()
+    private lazy var notCompleteTasks = [DataSoureModel]()
     
     override func setupView() {
         fetchAndCombineData()
     }
     
-     func fetchAndCombineData() {
+    private func fetchAndCombineData() {
         var apiDataSourceArray = [DataSoureModel]()
         var coreDataSourceArrat = [DataSoureModel]()
         let dispatchGroup = DispatchGroup()
@@ -71,18 +73,24 @@ final class TasksListView: BaseView {
                 notCompleteTasks.append(task)
             }
         }
-        
-     print(completedTasks)
-        print(notCompleteTasks)
+        self.statusView.updateTaskData(completed: completedTasks.count, notCompleted: notCompleteTasks.count)
     }
-    
+
     override func setupSubViews() {
+         addSubview(statusView)
+        statusView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().offset(30)
+            make.width.equalTo(400)
+            make.height.equalTo(20)
+        }
+        
         addSubview(tableView)
         tableView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.top.equalTo(statusView.snp.bottom).offset(30)
+            make.bottom.leading.trailing.equalToSuperview()
         }
     }
-    
 }
 
 extension TasksListView: UITableViewDelegate, UITableViewDataSource {
@@ -123,9 +131,5 @@ extension TasksListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         alert.show()
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        superview?.endEditing(true)
     }
 }

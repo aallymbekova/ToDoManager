@@ -22,8 +22,6 @@
 		BCB9D86A2C8F597300B75EB8 /* MainToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8692C8F597300B75EB8 /* MainToolbar.swift */; };
 		BCB9D86E2C8F5D4A00B75EB8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D86D2C8F5D4A00B75EB8 /* Resources.swift */; };
 		BCB9D8712C8F5E7F00B75EB8 /* UIColor + Ext .swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8702C8F5E7F00B75EB8 /* UIColor + Ext .swift */; };
-		BCB9D8742C8F6B6000B75EB8 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8732C8F6B6000B75EB8 /* StatusView.swift */; };
-		BCB9D8762C8F6EEA00B75EB8 /* StatusItem .swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8752C8F6EEA00B75EB8 /* StatusItem .swift */; };
 		BCB9D8792C90951700B75EB8 /* TasksListView .swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8782C90951700B75EB8 /* TasksListView .swift */; };
 		BCB9D87B2C9095A500B75EB8 /* TasksListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D87A2C9095A500B75EB8 /* TasksListCell.swift */; };
 		BCB9D87E2C90C67200B75EB8 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D87D2C90C67200B75EB8 /* ApiClient.swift */; };
@@ -37,6 +35,8 @@
 		BCB9D8982C9F363F00B75EB8 /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8972C9F363F00B75EB8 /* TaskData.swift */; };
 		BCB9D89A2C9F365D00B75EB8 /* ToDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8992C9F365D00B75EB8 /* ToDos.swift */; };
 		BCB9D89C2C9F367600B75EB8 /* DataSoureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D89B2C9F367600B75EB8 /* DataSoureModel.swift */; };
+		BCB9D89F2CA0719600B75EB8 /* StatusCollectonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D89E2CA0719600B75EB8 /* StatusCollectonView.swift */; };
+		BCB9D8A12CA072AC00B75EB8 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9D8A02CA072AC00B75EB8 /* StatusCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +59,6 @@
 		BCB9D8692C8F597300B75EB8 /* MainToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToolbar.swift; sourceTree = "<group>"; };
 		BCB9D86D2C8F5D4A00B75EB8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		BCB9D8702C8F5E7F00B75EB8 /* UIColor + Ext .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext .swift"; sourceTree = "<group>"; };
-		BCB9D8732C8F6B6000B75EB8 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
-		BCB9D8752C8F6EEA00B75EB8 /* StatusItem .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatusItem .swift"; sourceTree = "<group>"; };
 		BCB9D8782C90951700B75EB8 /* TasksListView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksListView .swift"; sourceTree = "<group>"; };
 		BCB9D87A2C9095A500B75EB8 /* TasksListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListCell.swift; sourceTree = "<group>"; };
 		BCB9D87D2C90C67200B75EB8 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -74,6 +72,8 @@
 		BCB9D8972C9F363F00B75EB8 /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
 		BCB9D8992C9F365D00B75EB8 /* ToDos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDos.swift; sourceTree = "<group>"; };
 		BCB9D89B2C9F367600B75EB8 /* DataSoureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSoureModel.swift; sourceTree = "<group>"; };
+		BCB9D89E2CA0719600B75EB8 /* StatusCollectonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCollectonView.swift; sourceTree = "<group>"; };
+		BCB9D8A02CA072AC00B75EB8 /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +204,8 @@
 		BCB9D8722C8F6B4E00B75EB8 /* Status */ = {
 			isa = PBXGroup;
 			children = (
-				BCB9D8732C8F6B6000B75EB8 /* StatusView.swift */,
-				BCB9D8752C8F6EEA00B75EB8 /* StatusItem .swift */,
+				BCB9D89E2CA0719600B75EB8 /* StatusCollectonView.swift */,
+				BCB9D8A02CA072AC00B75EB8 /* StatusCell.swift */,
 			);
 			path = Status;
 			sourceTree = "<group>";
@@ -372,22 +372,22 @@
 			files = (
 				BCB9D87B2C9095A500B75EB8 /* TasksListCell.swift in Sources */,
 				BCB9D8712C8F5E7F00B75EB8 /* UIColor + Ext .swift in Sources */,
-				BCB9D8742C8F6B6000B75EB8 /* StatusView.swift in Sources */,
 				BCB9D8932C9DF22600B75EB8 /* CustomAlert.swift in Sources */,
 				BCB9D88B2C99CF2C00B75EB8 /* CoreDataManager.swift in Sources */,
 				BCB9D89C2C9F367600B75EB8 /* DataSoureModel.swift in Sources */,
+				BCB9D89F2CA0719600B75EB8 /* StatusCollectonView.swift in Sources */,
 				BCB9D8632C8F577E00B75EB8 /* BaseTableViewCell.swift in Sources */,
 				BCB9D87E2C90C67200B75EB8 /* ApiClient.swift in Sources */,
 				BCB9D84A2C8F531500B75EB8 /* ViewController.swift in Sources */,
 				BCB9D86A2C8F597300B75EB8 /* MainToolbar.swift in Sources */,
 				BCB9D8982C9F363F00B75EB8 /* TaskData.swift in Sources */,
 				BCB9D8792C90951700B75EB8 /* TasksListView .swift in Sources */,
+				BCB9D8A12CA072AC00B75EB8 /* StatusCell.swift in Sources */,
 				BCB9D89A2C9F365D00B75EB8 /* ToDos.swift in Sources */,
 				BCB9D8652C8F57B700B75EB8 /* BaseCollectionViewCell.swift in Sources */,
 				BCB9D8882C98A6F800B75EB8 /* Tasks+CoreDataClass.swift in Sources */,
 				BCB9D8892C98A6F800B75EB8 /* Tasks+CoreDataProperties.swift in Sources */,
 				BCB9D85B2C8F552800B75EB8 /* BaseViewController.swift in Sources */,
-				BCB9D8762C8F6EEA00B75EB8 /* StatusItem .swift in Sources */,
 				BCB9D85D2C8F55A200B75EB8 /* BaseView.swift in Sources */,
 				BCB9D8952C9DF3EA00B75EB8 /* EditAlert.swift in Sources */,
 				BCB9D8812C98A23D00B75EB8 /* Tasks.xcdatamodeld in Sources */,

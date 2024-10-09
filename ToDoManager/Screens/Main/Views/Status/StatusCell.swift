@@ -1,23 +1,24 @@
 //
-//  StatusItem .swift
+//  StatusCell.swift
 //  ToDoManager
 //
-//  Created by Aliya Alymbekova on 9/9/24.
+//  Created by Aliya Alymbekova on 22/9/24.
 //
 
 import UIKit
 import SnapKit
 
-final class StatusItem: BaseView {
+final class StatusCell: BaseCollectionViewCell {
     
-    private lazy var title: BaseLabel = {
+     lazy var title: BaseLabel = {
        let view = BaseLabel()
+        view.text = R.Strings.StatusItem.all
         view.textColor = R.Colors.inactive
         view.font = R.Fonts.helvelticaRegular(with: 16)
         return view
     }()
     
-    private lazy var count: BaseLabel = {
+     lazy var count: BaseLabel = {
        let view = BaseLabel()
         view.textColor = R.Colors.cellBackground
         view.font = R.Fonts.helvelticaRegular(with: 12)
@@ -31,33 +32,10 @@ final class StatusItem: BaseView {
         return view
     }()
     
-    init(title: String, count: String) {
-        super.init()
-        
-        self.title.text = title
-        self.count.text = count
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func setupView() {
-        self.onTab { [self] in
-            if title.textColor == R.Colors.inactive, contener.backgroundColor == R.Colors.inactive {
-               title.textColor = R.Colors.active
-                contener.backgroundColor = R.Colors.active
-            } else {
-                title.textColor = R.Colors.inactive
-                contener.backgroundColor = R.Colors.inactive
-            }
-        }
-    }
-    
     override func setupSubViews() {
         addSubview(title)
         title.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(15)
             make.leading.equalToSuperview()
         }
         
